@@ -1,65 +1,90 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* border: .1px solid white; */
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  background-color: #1f1d1d;
+  color: white;
+}
+
 .naming_conversion {
-  margin: 2em;
-  padding: 1.4em;
-  background: tomato;
-  border-radius: 16px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
 }
 
-.naming_conversion .cases_div {
-  border-radius: 16px;
-  padding: 0.7em;
+input {
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  border-bottom: 2px solid #00bcd4;
+  width: 60%;
+  margin-bottom: 20px;
+  background-color: #111111;
+  color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 -2px 4px rgba(0, 188, 212, 0.2);
 }
 
-.naming_conversion #text {
-  margin: 0em 0em 1.4em;
-  outline: 0;
-  border-radius: 16px;
-  box-shadow: none;
-  border: navajowhite;
-  padding: 0.5em 1.4em;
-  width: 40%;
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+  border: none;
+  background-color: #00bcd4;
+  color: white;
+  cursor: pointer;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1), 0 -2px 4px rgba(0, 188, 212, 0.2);
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #0097a7;
 }
 
 .cases_div {
   display: flex;
-  justify-content: flex-start;
-  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  margin-top: 20px;
 }
 
 .case_div {
-  width: 100%;
-  background-color: cadetblue;
-  border-radius: 12px;
-  margin: 0.5em 0em;
-  padding: 0.5em;
+  width: 46%;
+  margin: 10px;
+  text-align: center;
+  border: 3px solid #00bcd4;
 }
 
-.case_div h1 {
-  font-size: 1em;
-  font-weight: 500;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  padding: 0em;
-  margin: 0em;
+h1 {
+  font-size: 18px;
+  background-color: #00bcd4;
+  color: #000;
 }
 
-.case_div p {
-  font-size: 1.2em;
+p {
+  font-size: 16px;
+  color: white;
+  padding: 10px;
   font-weight: bold;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  padding: 0em;
-  margin: 0em;
-  color: black;
 }
 
-#convert-btn {
-  outline: none;
-  box-shadow: none;
-  border: none;
-  border-radius: 12px;
-  padding: 0.3em 1.4em;
-  cursor: pointer;
+@media only screen and (max-width: 600px) {
+  input {
+    width: 80%;
+  }
+
+  .cases_div {
+    width: 80%;
+  }
+
+  .case_div {
+    width: 100%;
+  }
 }
